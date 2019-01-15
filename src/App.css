@@ -4,12 +4,12 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 15vmin;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,6 +20,44 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.PersonsList li{
+  list-style: none;
+}
+
+.PersonsList a{
+  margin-left: 10px;
+}
+
+.PersonsList li span{
+  width: 50px;
+  display: inline-flex;
+}
+
+.PersonsList li span:first-child{
+  width: 150px;
+}
+
+.PersonsList li:first-child h2{
+  margin-bottom: 2px;
+}
+
+.PersonsList li:first-child a{
+  margin-bottom: 10px;
+}
+
+.addForm label{
+  display: inline-flex;
+  width: 90px;
+}
+
+.form-btn{
+  margin-top: 10px;
+}
+
+.form-btn button{
+  margin-right: 10px;
 }
 
 @keyframes App-logo-spin {
