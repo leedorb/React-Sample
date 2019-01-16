@@ -48,8 +48,8 @@ export default class editPerson extends Component<Props, State>{
             "Age" : obj_state.age
         }
 
-        PersonService.editPerson(obj_state.id, obj).
-        then(() => {
+        PersonService.editPerson(obj_state.id, obj)
+        .then(() => {
             this.redirectToPersonPage();
         }).catch(response => {
             alert("Error occurred")
@@ -83,14 +83,14 @@ export default class editPerson extends Component<Props, State>{
                 <h1>Person details</h1>
                 {
                     this.state.person ? 
-                    <form className="addForm">
+                    <form>
                         {<FormInput lableName="Name: " inputName="p_Name" inputValue={this.state.person.firstName} inputChangeAction={this.handleInputChange}/>}
                         {<FormInput lableName="Last name: " inputName="p_lastName" inputValue={this.state.person.lastName} inputChangeAction={this.handleInputChange}/>}
                         {<FormInput lableName="Age: " inputName="p_Age" inputValue={this.state.person.age} inputChangeAction={this.handleInputChange}/>}
 
                         <div className="form-btn">
                             <button type="submit" className="form-send-btn" onClick={this.handleSubmit}>Save</button>
-                            <button type="submit" className="form-send-btn" onClick={this.handleCancel}>Cancel</button>
+                            <button className="form-send-btn" onClick={this.handleCancel}>Cancel</button>
                         </div> 
                     </form> 
                         : <div>{this.state.error_msg}</div>

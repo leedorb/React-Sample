@@ -24,7 +24,8 @@ export default class AddPerson extends Component<Props, State>{
     componentDidMount(){
     }   
 
-    handleCancel = () => {
+    handleCancel = (event : any) => {
+        event.preventDefault();
         this.redirectToPersonPage();
     }
 
@@ -47,8 +48,8 @@ export default class AddPerson extends Component<Props, State>{
                 "Age" : obj_state.age
             }
 
-            PersonService.addNewPerson(obj).
-            then(() => {
+            PersonService.addNewPerson(obj)
+            .then(() => {
                 this.redirectToPersonPage();
             }).catch(response => {
                 alert("Error occurred")
@@ -84,7 +85,7 @@ export default class AddPerson extends Component<Props, State>{
         return(
             <>
                 <h1>New Person</h1>
-                <form className="addForm">
+                <form>
                     {<FormInput lableName="ID: " inputName="p_ID" inputValue={this.state.Person.id} inputChangeAction={this.handleInputChange}/>}
                     {<FormInput lableName="Name: " inputName="p_Name" inputValue={this.state.Person.firstName} inputChangeAction={this.handleInputChange}/>}
                     {<FormInput lableName="Last name: " inputName="p_lastName" inputValue={this.state.Person.lastName} inputChangeAction={this.handleInputChange}/>}
@@ -92,7 +93,7 @@ export default class AddPerson extends Component<Props, State>{
 
                     <div className="form-btn">
                         <button type="submit" className="form-send-btn" onClick={this.handleSubmit}>Save</button>
-                        <button type="submit" className="form-send-btn" onClick={this.handleCancel}>Cancel</button>
+                        <button className="form-send-btn" onClick={this.handleCancel}>Cancel</button>
                     </div> 
                 </form>
             </>

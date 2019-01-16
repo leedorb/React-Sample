@@ -29,8 +29,8 @@ export default class HomePage extends Component<Props, State>{
 
     handlePersonDel = (event : any) =>{
         event.preventDefault();
-        PersonService.delPersonById(event.target.id).
-        then(() => {
+        PersonService.delPersonById(event.target.id)
+        .then(() => {
             this.setPersonList();
         })
     }

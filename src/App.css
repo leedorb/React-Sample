@@ -47,7 +47,7 @@
   margin-bottom: 10px;
 }
 
-.addForm label{
+form label{
   display: inline-flex;
   width: 90px;
 }

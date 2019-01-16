@@ -36,8 +36,8 @@ export default class personDetails extends Component<Props, State>{
     }
     handleDelete = (event : any) => {
         event.preventDefault();
-        PersonService.delPersonById(event.target.name).
-        then(() => {
+        PersonService.delPersonById(event.target.name)
+        .then(() => {
             this.redirectToPersonPage();
         })
     }

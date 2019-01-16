@@ -1,5 +1,5 @@
-//const apiUrl = 'http://localhost/app/api/person';
-const apiUrl = 'http://api-test-controller-leedor-test.apps.redhat-raanana.com/api/person';
+const apiUrl = 'http://localhost/app/api/person';
+//const apiUrl = 'http://api-test-controller-leedor-test.apps.redhat-raanana.com/api/person';
 
 export default class PersonService{    
     static getPersonListData = () => {

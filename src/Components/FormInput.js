@@ -10,18 +10,6 @@ type State = {
 }
 
 export default class FormInput extends Component<Prop, State>{
-     constructor(props: Prop){
-        super(props);
-    }
-
-    componentDidMount(){
-        
-    }
-    
-    componentDidUpdate(prevProps, prevState){
-        
-    }
-
     render(){
         return(
             <div className="col-md-4 text-align-start">
