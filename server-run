@@ -1,0 +1,16 @@
+const express = require('express');
+const path = require('path');
+const app = express();
+
+var ip = process.env.IP  || '0.0.0.0';
+var port = process.env.PORT || 8080;
+
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+app.listen(port, ip, function() {
+ console.log('running at ' + ip + ':' + port);
+});
