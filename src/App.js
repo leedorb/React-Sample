@@ -14,15 +14,16 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
+          <div style={{display: "none"}}>Node_ENV: {process.env.NODE_ENV}</div>
         	<Header />
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/Person" component={Home} />
-                <Route path="/person/new" component={AddPerson} />
-                <Route exact path="/Person/:id" component={PersonDetails} />
-                <Route path="/Person/:id/edit" component={EditPerson} />
-                <Route component={Error404} />
-            </Switch>
+          <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/Person" component={Home} />
+              <Route path="/person/new" component={AddPerson} />
+              <Route exact path="/Person/:id" component={PersonDetails} />
+              <Route path="/Person/:id/edit" component={EditPerson} />
+              <Route component={Error404} />
+          </Switch>
         </div>
       </BrowserRouter>
     );
