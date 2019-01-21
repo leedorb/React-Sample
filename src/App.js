@@ -14,7 +14,6 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <div style={{display: "none"}}>Node_ENV: {process.env.NODE_ENV}</div>
         	<Header />
           <Switch>
               <Route exact path="/" component={Home} />
